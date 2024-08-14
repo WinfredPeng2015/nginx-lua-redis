@@ -4,13 +4,13 @@ FROM openresty/openresty:alpine
 RUN apk update && \
     apk add vim bash
 # 複製 nginx.conf 文件到容器內
-COPY nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
+COPY ./nginx/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
 
 # 複製靜態文件到容器內
-COPY html /usr/local/openresty/nginx/html
+COPY build /usr/local/openresty/nginx/html
 
 # 複製 Lua 文件到容器內
-COPY lua /usr/local/openresty/nginx/lua
+COPY ./nginx/lua /usr/local/openresty/nginx/lua
 
 # 暴露端口
 EXPOSE 80
