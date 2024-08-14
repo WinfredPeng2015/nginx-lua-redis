@@ -1,0 +1,15 @@
+{
+    "extends": [
+        "react-app"
+    ],
+    "rules": {
+        "react/display-name": 0,
+        "react/no-unused-prop-types": 0,
+        "import/no-anonymous-default-export": 0,
+        "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }]
+    },
+    "env": {
+        "browser": true,
+        "es6": true
+    }
+}
